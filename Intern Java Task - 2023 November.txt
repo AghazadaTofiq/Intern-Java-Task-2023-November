@@ -1,0 +1,40 @@
+// Student Class
+public class Student {
+    private String name;
+    private int age;
+    private List<Book> booksReading;
+    // Getters and Setters
+}
+
+// Author Class
+public class Author {
+    private String name;
+    private int age;
+    private List<Book> authoredBooks;
+    // Getters and Setters
+}
+
+// Book Class
+public class Book {
+    private String name;
+    private Author author;
+    // Getters and Setters
+}
+
+// GET endpoint
+@GetMapping("/books/{bookId}/readers")
+public List<Student> getReadersForBook(@PathVariable Long bookId) {
+    // Implement logic to retrieve readers for the given book
+}
+
+// GET endpoint
+@GetMapping("/students/{studentId}/books/reading")
+public List<Book> getBooksReading(@PathVariable Long studentId) {
+    // Implement logic to retrieve books a student is reading
+}
+
+// DELETE endpoint
+@DeleteMapping("/authors/{authorId}/books/{bookId}")
+public ResponseEntity<String> deleteBook(@PathVariable Long authorId, @PathVariable Long bookId) {
+    // Implement logic to delete an author's book
+}
